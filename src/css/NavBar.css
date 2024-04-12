@@ -1,0 +1,78 @@
+.navBar {
+  position: fixed;
+  top: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navButtons {
+  flex-direction: column;
+  display: flex;
+  gap: 50px;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem;
+  width: fit-content;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+.navButton:hover {
+  transform: scale(1.1);
+  border-radius: 25%;
+}
+
+.navButton.active {
+  transform: scale(1.1);
+  border-radius: 25%;
+}
+
+.dashBoardIcon {
+  background-color: #3498db;
+}
+
+.noteIcon {
+  background-color: #9b59b6;
+}
+
+.addIcon {
+  background-color: #1abc9c;
+}
+
+.friendsIcon {
+  background-color: #2ecc71;
+}
+
+.chatIcon {
+  background-color: #e67e22;
+}
+
+@media (max-width: 500px) {
+  .navBar {
+    top: auto;
+    bottom: 0;
+    flex-direction: row;
+    width: 100vw;
+    padding-top: 0;
+  }
+
+  .navButtons {
+    flex-direction: row;
+    width: 100%;
+    padding: 1rem;
+    gap: 0px;
+    justify-content: space-around;
+  }
+
+  .navButton{
+    padding: 0.5rem;
+  }
+}
