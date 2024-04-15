@@ -62,6 +62,7 @@
     flex-direction: row;
     width: 100vw;
     padding-top: 0;
+    height: 4rem;
   }
 
   .navButtons {
