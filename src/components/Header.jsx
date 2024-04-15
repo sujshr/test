@@ -8,7 +8,7 @@ import AddCircleIcon from "@mui/icons-material/AddCircle";
 
 function Header() {
   return (
-    <div className="absolute top-0 left-0 w-screen flex justify-between items-center py-4 pl-4 pr-8 h-20 md:h-28">
+    <div className="fixed top-0 left-0 w-screen flex justify-between items-center py-4 pl-4 pr-8 h-20 md:h-28">
       <Link to="/">
         <img src={logo} alt="" className="logo h-16 md:h-20 " />
       </Link>

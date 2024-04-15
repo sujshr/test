@@ -67,11 +67,15 @@
 @media (max-width: 780px) {
   .dashboard {
     grid-template-columns: 1fr;
+    height: calc(100vh - 9rem);
   }
 
   .myNotes,
   .reviewList {
     min-height: 350px;
+  }
+  .reviewList {
+    margin-bottom: 1rem;
   }
 }
 
