@@ -1,0 +1,29 @@
+.noteNook {
+  margin-top: 7rem;
+  margin-left: 112px;
+  background-color: aliceblue;
+  border-top-left-radius: 20px;
+  height: calc(100vh - 112px);
+  padding: 2rem;
+  display: grid;
+  overflow-y: scroll;
+  grid-template-columns: 1fr 325px;
+  gap: 20px;
+}
+
+
+@media (max-width: 1200px) {
+  .noteNook {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .noteNook {
+    margin-top: 5rem;
+    margin-left: 0px;
+    border-radius: 0px;
+    height: calc(100vh - 155px);
+    padding: 1rem;
+  }
+}

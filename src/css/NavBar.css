@@ -1,7 +1,7 @@
 .navBar {
   position: fixed;
   top: 100px;
-  width: 100px;
+  width: 112px;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -55,7 +55,7 @@
   background-color: #e67e22;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 640px) {
   .navBar {
     top: auto;
     bottom: 0;
