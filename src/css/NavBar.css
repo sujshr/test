@@ -7,7 +7,6 @@
   padding-top: 100px;
   justify-content: center;
   align-items: center;
-  background-color: #d9edec;
 }
 
 .navButtons {
@@ -56,14 +55,13 @@
   background-color: #e67e22;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 500px) {
   .navBar {
     top: auto;
     bottom: 0;
     flex-direction: row;
     width: 100vw;
     padding-top: 0;
-    height: 4rem;
   }
 
   .navButtons {
@@ -74,7 +72,7 @@
     justify-content: space-around;
   }
 
-  .navButton {
+  .navButton{
     padding: 0.5rem;
   }
 }

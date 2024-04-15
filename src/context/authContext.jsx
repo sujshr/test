@@ -12,24 +12,8 @@ function AuthProvider({ children }) {
       password: "testPassword123",
       oauthProvider: "Google",
       oauthId: "google123",
-      friends: [
-        {
-          username: "Friend 1",
-        },
-        {
-          username: "Friend 1",
-        },
-        {
-          username: "Friend 1",
-        },
-        {
-          username: "Friend 1",
-        },
-        {
-          username: "Friend 1",
-        },
-      ],
-      notes: [1, 2, 3, 4],
+      friends: [],
+      notes: [],
       chats: [],
     },
   });
