@@ -1,6 +1,3 @@
-.noteNookApp::-webkit-scrollbar {
-  display: none;
-}
 .noteNook {
   position: relative;
   margin-top: 7rem;
