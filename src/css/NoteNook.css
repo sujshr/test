@@ -38,7 +38,9 @@
     top: 5rem;
     left: 0px;
     border-radius: 0px;
+    height: calc(100vh - 9rem);
     width: 100vw;
     padding: 1rem;
+    padding-bottom: 5rem;
   }
 }
