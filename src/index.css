@@ -25,7 +25,7 @@ html {
 
 body {
   background-color: #d9edec;
-  /* height: -webkit-fill-available; */
+  height: -webkit-fill-available;
 }
 
 .min-height-50 {
