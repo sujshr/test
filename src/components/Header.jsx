@@ -28,7 +28,11 @@ function UserInfo() {
         <AddCircleIcon className="headerIcon" style={style} fontSize="medium" />
       </Link>
 
-      <EmojiEmotionsIcon  className="headerIcon" style={style} fontSize="medium" />
+      <EmojiEmotionsIcon
+        className="headerIcon"
+        style={style}
+        fontSize="medium"
+      />
 
       <Link
         to={"/notenook/profile"}
