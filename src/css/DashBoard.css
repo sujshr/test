@@ -78,7 +78,7 @@
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 385px) {
   .statDiv p {
     font-size: 10px;
   }

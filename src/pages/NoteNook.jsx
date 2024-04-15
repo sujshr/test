@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Connections from "../components/Connections";
 function NoteNook() {
   return (
-    <div>
+    <div className="noteNookApp">
       <NavBar />
       <Header />
       <div className="noteNook">
