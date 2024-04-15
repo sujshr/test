@@ -23,7 +23,7 @@ function UserInfo() {
     color: "#0099ff",
   };
   return (
-    <div className="flex gap-3 justify-between items-center">
+    <div className="flex header gap-3 justify-between items-center">
       <Link to="/notenook/add">
         <AddCircleIcon className="headerIcon" style={style} fontSize="medium" />
       </Link>
