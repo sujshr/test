@@ -1,5 +1,5 @@
 .navBar {
-  position: fixed;
+  position: absolute;
   top: 100px;
   width: 112px;
   display: flex;
