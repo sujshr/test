@@ -15,17 +15,17 @@ html {
   height: -webkit-fill-available;
 }
 
+body {
+  background-color: #d9edec;
+  height: -webkit-fill-available;
+}
+
 .logo {
   transition: transform 0.3s ease-in-out;
 }
 
 .logo:hover {
   transform: translate(-0.5px, -0.5px) scale(1.02);
-}
-
-body {
-  background-color: #d9edec;
-  height: -webkit-fill-available;
 }
 
 .min-height-50 {
@@ -84,6 +84,38 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.searchBarContainer {
+  display: flex;
+  background-color: #c6fffc;
+  max-width: 500px;
+  width: 80vw;
+  padding: 0.25rem;
+  border-radius: 34px;
+}
+
+.searchBar {
+  width: 90%;
+  background-color: #c6fffc;
+  outline: none;
+  border-radius: 34px;
+  padding: 0 1rem;
+}
+
+.searchIconContainer {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c6fffc;
+  border-radius: 34px;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.searchIconContainer:hover {
+  transform: scale(1.1);
 }
 
 .heading {

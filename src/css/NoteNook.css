@@ -1,16 +1,16 @@
 .noteNook {
   position: fixed;
+  display: grid;
   top: 7rem;
   left: 112px;
-  background-color: aliceblue;
+  grid-template-columns: 1fr 325px;
+  gap: 20px;
   border-top-left-radius: 20px;
   height: calc(100vh - 112px);
   width: calc(100vw - 112px);
   padding: 2rem;
-  display: grid;
+  background-color: aliceblue;
   overflow-y: scroll;
-  grid-template-columns: 1fr 325px;
-  gap: 20px;
 }
 
 .header {
@@ -41,6 +41,6 @@
     height: calc(100vh - 9rem);
     width: 100vw;
     padding: 1rem;
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
   }
 }
