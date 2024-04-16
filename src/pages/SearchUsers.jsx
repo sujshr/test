@@ -4,7 +4,7 @@ import "../css/Search.css";
 
 function SearchUsers() {
   return (
-    <div className="searchUsers">
+    <div className="searchUser">
       <div className="searchBarContainer">
         <input className="searchBar" type="search" name="" id="" />
         <div className="searchIconContainer">

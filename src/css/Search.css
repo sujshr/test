@@ -1,6 +1,7 @@
-.searchNote, .searchUsers {
+.searchNote, .searchUser {
   display: flex;
   flex-direction: column;
+  height: 100%;
   align-items: center;
   gap: 1.5rem;
 }
