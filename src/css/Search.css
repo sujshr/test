@@ -27,6 +27,7 @@
 .searchNotesPage .myNotes{
   grid-row: inherit;
 }
+
 @media (max-width: 1200px) {
   .searchUsersPage, .searchNotesPage {
     grid-template-columns: 1fr;
