@@ -3,8 +3,6 @@
   display: grid;
   top: 7rem;
   left: 112px;
-  grid-template-columns: 1fr 325px;
-  gap: 20px;
   border-top-left-radius: 20px;
   height: calc(100vh - 112px);
   width: calc(100vw - 112px);
@@ -27,12 +25,6 @@
   color: gray;
 }
 
-@media (max-width: 1200px) {
-  .noteNook {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 640px) {
   .noteNook {
     top: 5rem;
@@ -43,4 +35,10 @@
     padding: 1rem;
     padding-bottom: 4rem;
   }
+}
+
+
+.noteNook::-webkit-scrollbar-thumb {
+  background: #3498db;
+  border-radius: 4px;
 }
