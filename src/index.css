@@ -134,8 +134,4 @@ body {
   .heading {
     font-size: 1rem;
   }
-
-  ::-webkit-scrollbar {
-    width: 0px;
-  }
 }
