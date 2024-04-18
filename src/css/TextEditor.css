@@ -20,6 +20,7 @@
   justify-content: center;
   max-width: 1000px;
   width: 70vw;
+  height: 10%;
   gap: 2px;
 }
 
@@ -54,5 +55,12 @@
 @media (max-width: 640px) {
   .textEditor {
     height: 100%;
+  }
+  #toolbar {
+    height: 20%;
+  }
+
+  #textEditorContainer {
+    height: 80%;
   }
 }
