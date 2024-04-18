@@ -28,7 +28,7 @@ function AddNotes() {
   return (
     <div className="addNotesPage">
       <TextEditor />
-      <div>
+      <div className="postNoteForm">
         <form className="noteDetails" onSubmit={handleSubmit(onSubmit)}>
           <div className="addNoteButtons">
             <div className="file-input-container">

@@ -13,6 +13,12 @@
   height: 5%;
 }
 
+#toolbar{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 #textEditorContainer {
   height: 90%;
   background-color: rgb(255, 255, 255);
@@ -33,4 +39,8 @@
 .ql-container.ql-snow,
 .ql-toolbar.ql-snow {
   border: none;
+}
+
+#toolbar .ql-header.ql-picker{
+  width: 50px;
 }
