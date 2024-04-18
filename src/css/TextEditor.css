@@ -59,7 +59,9 @@
   #toolbar {
     height: 20%;
   }
-
+  .ql-editor::-webkit-scrollbar {
+    width: 0px;
+  }
   #textEditorContainer {
     height: 80%;
   }
