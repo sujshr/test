@@ -104,6 +104,6 @@
 @media (max-width: 640px) {
   .dashboard {
     grid-template-columns: 1fr;
-    padding-bottom: 6rem;
+    padding-bottom: 4.5rem;
   }
 }

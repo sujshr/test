@@ -54,7 +54,7 @@
     padding: 0;
     overflow-y: scroll;
     grid-template-rows: 100% 10%;
-    padding-bottom: 6rem;
+    padding-bottom: 4.5rem;
   }
 }
 
