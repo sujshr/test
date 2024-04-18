@@ -100,10 +100,3 @@
     grid-template-columns: 1fr;
   }
 }
-
-@media (max-width: 640px) {
-  .dashBoardPage {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-}
