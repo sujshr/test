@@ -56,3 +56,9 @@
     display: none;
   }
 }
+
+@media (max-width: 640px) {
+  .addNotesPage {
+    padding: 0;
+  }
+}
