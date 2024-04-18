@@ -59,7 +59,7 @@ function AddNotes() {
             </button>
           </div>
 
-          {formVisibility && (
+          {/* {formVisibility && (
             <>
               {" "}
               <div className="field">
@@ -98,7 +98,7 @@ function AddNotes() {
                 <p className="error">{errors.chapter?.message}</p>
               </div>
             </>
-          )}
+          )} */}
         </form>
       </div>
     </div>

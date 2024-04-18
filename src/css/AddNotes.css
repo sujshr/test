@@ -53,12 +53,14 @@
     grid-template-columns: 1fr;
   }
   .postNoteForm {
-    display: none;
+    height: 20%;
   }
 }
 
 @media (max-width: 640px) {
   .addNotesPage {
     padding: 0;
+    height: 120%;
+    align-items:baseline;
   }
 }
