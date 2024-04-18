@@ -8,15 +8,20 @@
 }
 
 .toolBarContainer {
-  position: sticky;
   top: 0;
-  height: 5%;
+  min-height: 5%;
 }
 
-#toolbar{
+#toolbar {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  z-index: 10;
+}
+
+#toolbar * {
+  z-index: 10;
 }
 
 #textEditorContainer {
@@ -27,9 +32,11 @@
   padding: 1rem;
 }
 
-.ql-editor{
+.ql-editor {
+  position: relative;
   height: 100%;
   overflow-y: scroll;
+  z-index: 5;
 }
 
 .ql-container {
@@ -41,6 +48,6 @@
   border: none;
 }
 
-#toolbar .ql-header.ql-picker{
-  width: 50px;
+#toolbar .ql-header.ql-picker {
+  width: 40px;
 }

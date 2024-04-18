@@ -16,11 +16,10 @@ function ToolBar() {
           <button className="ql-align" value="justify"></button>
         </span>
 
-        <select className="ql-size" defaultValue={""}>
-          <option></option>
-          <option value="small"></option>
-          <option value="large"></option>
-          <option value="huge"></option>
+        <select class="ql-header">
+          <option value="1">h1</option>
+          <option value="2">h2</option>
+          <option value="3">h3</option>
         </select>
 
         <button className="ql-clean"></button>
