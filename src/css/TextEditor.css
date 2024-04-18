@@ -16,12 +16,11 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  z-index: 10;
-}
-
-#toolbar * {
-  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  width: 70vw;
+  gap: 2px;
 }
 
 #textEditorContainer {
@@ -48,6 +47,6 @@
   border: none;
 }
 
-#toolbar .ql-header.ql-picker {
-  width: 40px;
+#toolbar .ql-size.ql-picker {
+  width: 50px;
 }
