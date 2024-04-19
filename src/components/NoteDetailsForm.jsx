@@ -27,7 +27,7 @@ function NoteDetailsForm() {
     console.log(data);
   };
 
-  const [formVisibility, setFormVisibility] = useState(false);
+  const [formVisibility, setFormVisibility] = useState(true);
 
   const showForm = () => {
     setFormVisibility(!formVisibility);

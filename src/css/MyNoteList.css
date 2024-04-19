@@ -5,6 +5,7 @@
 }
 
 .notes {
+  padding-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 500px));
   gap: 16px;
@@ -12,11 +13,10 @@
 }
 
 .note {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 8px;
+  padding: 16px;
   margin-bottom: 10px;
-  background-color: #f9f9f9;
+  background-color: #f2f8fe; 
 }
 
 .note .noteInfo p {
@@ -25,22 +25,41 @@
 
 .note .subject {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .note .title {
   font-size: 1rem;
   font-weight: 500;
-  color: #666;
 }
 
 .note .postedBy {
-    font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-style: italic;
   color: #888;
 }
 
 .note .uploadDate {
+  font-size: 0.75rem;
   color: #888;
-  font-size: 0.75em;
+}
+
+.noteButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.noteButtons button.update {
+  background-color: #3498db; 
+  color: #fff;
+}
+
+.noteButtons button.delete {
+  background-color: #e74c3c; 
+  color: #fff;
+}
+
+.noteButtons button:hover {
+  opacity: 0.9;
 }

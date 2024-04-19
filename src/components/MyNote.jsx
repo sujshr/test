@@ -10,12 +10,21 @@ function MyNote({ note }) {
     <div className="note">
       <Link to={`/${note._id}`}>
         <div className="noteInfo">
-          <p className="subject">Subject: {note.subject}</p>
-          <p className="title">Title: {note.title}</p>
+          <p className="subject">
+            <span className="subjectLable">Subject: </span> {note.subject}
+          </p>
+          <p className="title">
+            <span className="titleLable">Title: </span>
+            {note.title}
+          </p>
         </div>
       </Link>
-      <p className="postedBy">{note.user.username}</p>
+      <p className="postedBy">{note.user?.username}</p>
       <p className="uploadDate">Updated At: {formatDate(note.updatedAt)}</p>
+      <div className="noteButtons">
+        <button className="update button">Update</button>
+        <button className="delete button">Delete</button>
+      </div>
     </div>
   );
 }
