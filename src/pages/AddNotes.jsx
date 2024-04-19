@@ -31,26 +31,24 @@ function AddNotes() {
       <div className="postNoteForm">
         <form className="noteDetails" onSubmit={handleSubmit(onSubmit)}>
           <div className="addNoteButtons">
-            <div className="file-input-container">
-              {formVisibility && (
-                <>
-                  <input
-                    type="file"
-                    id="fileInput"
-                    className="file-input"
-                    aria-describedby="fileInputLabel"
-                  />
-                  <label
-                    htmlFor="fileInput"
-                    className="file-input-label"
-                    role="button"
-                    id="fileInputLabel"
-                  >
-                    Upload Files
-                  </label>
-                </>
-              )}
-            </div>
+            {formVisibility && (
+              <div className="file-input-container">
+                <input
+                  type="file"
+                  id="fileInput"
+                  className="file-input"
+                  aria-describedby="fileInputLabel"
+                />
+                <label
+                  htmlFor="fileInput"
+                  className="file-input-label"
+                  role="button"
+                  id="fileInputLabel"
+                >
+                  Upload Files
+                </label>
+              </div>
+            )}
             <div className="button" onClick={showForm}>
               Note details
             </div>
