@@ -58,6 +58,7 @@
   .addNotesPage {
     grid-template-columns: 1fr;
     padding: 0;
+    height: 120%;
     overflow-y: scroll;
     grid-template-rows: 100% 10%;
     padding-bottom: 4rem;
