@@ -27,37 +27,42 @@ function AddNotes() {
 
   return (
     <div className="addNotesPage">
-      <TextEditor />
-      <div className="postNoteForm">
-        <form className="noteDetails" onSubmit={handleSubmit(onSubmit)}>
-          <div className="addNoteButtons">
-            {formVisibility && (
-              <div className="file-input-container">
-                <input
-                  type="file"
-                  id="fileInput"
-                  className="file-input"
-                  aria-describedby="fileInputLabel"
-                />
-                <label
-                  htmlFor="fileInput"
-                  className="file-input-label"
-                  role="button"
-                  id="fileInputLabel"
-                >
-                  Upload Files
-                </label>
+      <div className="addNotes">
+        <TextEditor />
+        <div className="postNoteForm">
+          <form className="noteDetails" onSubmit={handleSubmit(onSubmit)}>
+            <div className="addNoteButtons">
+              {formVisibility && (
+                <div className="file-input-container">
+                  <input
+                    type="file"
+                    id="fileInput"
+                    className="file-input"
+                    aria-describedby="fileInputLabel"
+                  />
+                  <label
+                    htmlFor="fileInput"
+                    className="file-input-label"
+                    role="button"
+                    id="fileInputLabel"
+                  >
+                    Upload Files
+                  </label>
+                </div>
+              )}
+              <div className="button" onClick={showForm}>
+                Note details
               </div>
-            )}
-            <div className="button" onClick={showForm}>
-              Note details
+              <button
+                type="submit"
+                className="button"
+                disabled={!formVisibility}
+              >
+                Post
+              </button>
             </div>
-            <button type="submit" className="button" disabled={!formVisibility}>
-              Post
-            </button>
-          </div>
 
-          {/* {formVisibility && (
+            {/* {formVisibility && (
             <>
               {" "}
               <div className="field">
@@ -97,7 +102,8 @@ function AddNotes() {
               </div>
             </>
           )} */}
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );
