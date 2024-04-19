@@ -13,10 +13,10 @@ function ToolBar() {
         <button className="ql-align" value="justify"></button>
 
         <select class="ql-size">
-          <option selected>nm</option>
-          <option value="huge">h1</option>
-          <option value="large">h2</option>
-          <option value="small">sm</option>
+          <option selected></option>
+          <option value="huge">Heading1</option>
+          <option value="large">Heading2</option>
+          <option value="small">Small</option>
         </select>
 
         <button className="ql-blockquote"></button>
