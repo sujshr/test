@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
-import TextEditor from "../components/TextEditor";
+import React, { useContext, useState } from "react";
 import "../css/AddNotes.css";
 import { Routes, Route, Link } from "react-router-dom";
-import NoteDetailsForm from "../components/NoteDetailsForm";
 import MyNoteList from "../components/MyNoteList";
+import NewNoteForm from "../components/NewNoteForm";
+import WriteNote from "../components/WriteNote";
 import { DeviceWidthContext } from "../context/deviceWidthContext";
 function AddNotes() {
   return (
@@ -11,7 +11,7 @@ function AddNotes() {
       <div className="addNotes">
         <Routes>
           <Route path="/" element={<MyNotes />}></Route>
-          <Route path="/newNote" element={<NewNote />}></Route>
+          <Route path="/writeNote/:id" element={<WriteNote />}></Route>
         </Routes>
       </div>
     </div>
@@ -19,26 +19,24 @@ function AddNotes() {
 }
 
 function MyNotes() {
+  const [postNewNote, setPostNewNote] = useState(false);
   const width = useContext(DeviceWidthContext);
+  const handleClick = () => {
+    setPostNewNote(!postNewNote);
+  };
   return (
     <>
-      <MyNoteList />
+      {postNewNote && <NewNoteForm handleClick={handleClick} />}
+      <MyNoteList handleClick={handleClick} />
+
       {width < 1024 && (
         <div className="w-full flex justify-between items-center flex-col">
           <p className="mb-4">Wanna add a note?</p>
           <Link to={"newNote"}>
-            <button className="button">Upload a new note?</button>
+            <button className="button">Upload a new note</button>
           </Link>
         </div>
       )}
-    </>
-  );
-}
-function NewNote() {
-  return (
-    <>
-      <TextEditor />
-      <NoteDetailsForm />
     </>
   );
 }
