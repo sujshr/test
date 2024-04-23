@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  background-color: #d9edec;
+  height: -webkit-fill-available;
+}
+
+.logo {
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: translate(-0.5px, -0.5px) scale(1.02);
+}
+
+.min-height-50 {
+  min-height: 50vh;
+}
+
+.min-height-60 {
+  min-height: 60vh;
+}
+
+.button {
+  align-items: center;
+  background-color: #157ce3;
+  border: 0;
+  border-radius: 100px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  justify-content: center;
+  overflow: hidden;
+  padding: 8px 15px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #16437e;
+  color: #ffffff;
+}
+
+.button:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.button:disabled {
+  background: #09223b;
+  color: rgb(255, 255, 255, 0.7);
+  cursor: not-allowed;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3498db27;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #21a2ff81;
+}
+
+.searchBarContainer {
+  display: flex;
+  background-color: #c6fffc;
+  max-width: 500px;
+  width: 80vw;
+  padding: 0.25rem;
+  border-radius: 34px;
+}
+
+.searchBar {
+  width: 90%;
+  background-color: #c6fffc;
+  outline: none;
+  border-radius: 34px;
+  padding: 0 1rem;
+}
+
+.searchIconContainer {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c6fffc;
+  border-radius: 34px;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.searchIconContainer:hover {
+  transform: scale(1.1);
+}
+
+.heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 640px) {
+  .heading {
+    font-size: 1rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+}
