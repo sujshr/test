@@ -8,6 +8,7 @@
   padding: 2rem;
   gap: 10px;
   height: 100%;
+  align-items: center;
 }
 
 .file-input-container {
@@ -44,7 +45,7 @@
   max-height: 100%;
   overflow-y: scroll;
   display: flex;
-  max-width: 90vw;
+  max-width: 80vw;
   flex-direction: column;
   align-items: center;
 }
@@ -64,6 +65,7 @@
   padding: 2rem 1rem;
   border-radius: 10px;
   box-shadow: 0 0 5px 0 rgba(128, 128, 128, 0.319);
+  height: fit-content;
 }
 
 .newNoteForm {
@@ -82,6 +84,8 @@
 }
 
 .newNoteForm form {
+  background-color: aliceblue;
+
   padding: 2rem 1rem;
   border-radius: 10px;
   box-shadow: 0 0 5px 0 rgba(128, 128, 128, 0.472);
