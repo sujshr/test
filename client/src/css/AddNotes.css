@@ -69,6 +69,7 @@
 }
 
 .newNoteForm {
+  background-color: aliceblue;
   position: absolute;
   top: -1rem;
   left: 0rem;
