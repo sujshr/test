@@ -4,8 +4,10 @@ import "quill/dist/quill.snow.css";
 import ToolBar from "./ToolBar";
 import "../css/TextEditor.css";
 import { io } from "socket.io-client";
+import { useParams } from "react-router-dom";
 
 function TextEditor() {
+  const { documentId } = useParams();
   const [socket, setSocket] = useState();
   const [quill, setQuill] = useState();
 
@@ -22,6 +24,8 @@ function TextEditor() {
       },
       theme: "snow",
     });
+    q.disable();
+    q.setText("Loading document......");
     setQuill(q);
   }, []);
 
@@ -53,7 +57,48 @@ function TextEditor() {
       quill.off("text-change", handler);
     };
   }, [socket, quill]);
-  
+
+  useEffect(() => {
+    if (socket == null || quill == null) {
+      return;
+    }
+    const handler = (delta) => {
+      quill.updateContents(delta);
+    };
+
+    socket.on("receive-change", handler);
+
+    return () => {
+      quill.off("text-change", handler);
+    };
+  }, [socket, quill]);
+
+  useEffect(() => {
+    if (socket == null || quill == null) {
+      return;
+    }
+
+    socket.once("load-document", (document) => {
+      quill.setContents(document);
+      quill.enable();
+    });
+
+    socket.emit("get-document", documentId);
+  }, [socket, quill, documentId]);
+
+  useEffect(() => {
+    if (socket == null || quill == null) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      socket.emit("save-document", quill.getContents());
+    }, 2000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  });
   return (
     <div className="relative textEditor">
       <ToolBar />

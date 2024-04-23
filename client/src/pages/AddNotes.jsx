@@ -12,7 +12,7 @@ function AddNotes() {
       <div className="addNotes">
         <Routes>
           <Route path="/" element={<MyNotes />}></Route>
-          <Route path="/writeNote/:id" element={<WriteNote />}></Route>
+          <Route path="/writeNote/:documentId" element={<WriteNote />}></Route>
         </Routes>
       </div>
     </div>
