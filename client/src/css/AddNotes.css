@@ -84,8 +84,6 @@
 }
 
 .newNoteForm form {
-  background-color: aliceblue;
-
   padding: 2rem 1rem;
   border-radius: 10px;
   box-shadow: 0 0 5px 0 rgba(128, 128, 128, 0.472);
@@ -106,7 +104,7 @@
     padding-bottom: 4rem;
   }
   .addNoteButtons {
-    width: 90vw;
+    width: 80vw;
     max-width: 400px;
   }
 }
