@@ -101,6 +101,8 @@
   .addNotes {
     grid-template-columns: 1fr;
     padding: 0;
+    padding-bottom: 4rem;
+
     grid-template-rows: 90% auto;
   }
   .addNoteButtons {
