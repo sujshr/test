@@ -10,24 +10,8 @@ function TextEditor() {
   const { documentId } = useParams();
   const [socket, setSocket] = useState();
   const [quill, setQuill] = useState();
-
-  const wrapperRef = useCallback((wrapper) => {
-    console.log(wrapper);
-    if (wrapper == null) return;
-    wrapper.innerHTML = "";
-    const editor = document.createElement("div");
-
-    wrapper.append(editor);
-    const q = new Quill(editor, {
-      modules: {
-        toolbar: { container: "#toolbar" },
-      },
-      theme: "snow",
-    });
-    q.disable();
-    q.setText("Loading document......");
-    setQuill(q);
-  }, []);
+  const [loadingError, setLoadingError] = useState(null);
+  const [savingError, setSavingError] = useState(null);
 
   useEffect(() => {
     const socketConnection = io(
@@ -62,34 +46,21 @@ function TextEditor() {
     if (socket == null || quill == null) {
       return;
     }
-    const handler = (delta) => {
-      quill.updateContents(delta);
-    };
 
-    socket.on("receive-change", handler);
-
-    return () => {
-      quill.off("text-change", handler);
-    };
-  }, [socket, quill]);
-
-  useEffect(() => {
-    if (socket == null || quill == null) {
-      return;
-    }
+    socket.emit("get-document", documentId);
 
     socket.once("load-document", (document) => {
       quill.setContents(document);
       quill.enable();
     });
 
-    socket.emit("get-document", documentId);
-  }, [socket, quill, documentId]);
+    socket.on("document-fetch-error", (errorMessage) => {
+      setLoadingError(errorMessage);
+    });
 
-  useEffect(() => {
-    if (socket == null || quill == null) {
-      return;
-    }
+    socket.on("document-save-error", (errorMessage) => {
+      setSavingError(errorMessage);
+    });
 
     const interval = setInterval(() => {
       socket.emit("save-document", quill.getContents());
@@ -98,9 +69,29 @@ function TextEditor() {
     return () => {
       clearInterval(interval);
     };
-  });
+  }, [socket, quill, documentId]);
+
+  const wrapperRef = useCallback((wrapper) => {
+    if (wrapper == null) return;
+    wrapper.innerHTML = "";
+    const editor = document.createElement("div");
+
+    wrapper.append(editor);
+    const q = new Quill(editor, {
+      modules: {
+        toolbar: { container: "#toolbar" },
+      },
+      theme: "snow",
+    });
+    q.disable();
+    q.setText("Loading document......");
+    setQuill(q);
+  }, []);
+
   return (
     <div className="relative textEditor">
+      {loadingError && <div>Error loading document: {loadingError}</div>}
+      {savingError && <div>Error saving document: {savingError}</div>}
       <ToolBar />
       <div id="textEditorContainer" ref={wrapperRef}>
         <div id="editor"></div>
