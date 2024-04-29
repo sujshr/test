@@ -25,7 +25,6 @@
 .reviewList {
   grid-row: span 3;
   background-color: #fff8b8;
-  overflow-y: scroll;
 }
 
 .dashBoardComponent {
@@ -74,6 +73,7 @@
 
 @media (max-width: 850px) {
   .dashboard {
+    height: auto;
     grid-template-columns: 1fr;
     padding-bottom: 2rem;
   }
@@ -81,7 +81,7 @@
   .dashboard .noteList,
   .dashboard .reviewList {
     min-height: 450px;
-    height: 30vh;
+    height: 40vh;
   }
 }
 

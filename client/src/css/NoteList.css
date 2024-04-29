@@ -40,7 +40,7 @@
   color: #888;
 }
 
-.noteList .notesDisplay {
+.notesDisplay {
   height: 95%;
   overflow-y: hidden;
   display: flex;
@@ -50,7 +50,7 @@
   padding-bottom: 1rem;
 }
 
-.noteList .notesDisplay:hover {
+.notesDisplay:hover {
   overflow-y: scroll;
   width: 100%;
 }
@@ -104,10 +104,9 @@
 }
 
 @media (max-width: 780px) {
-  .noteList .notesDisplay {
+  .notesDisplay {
     overflow-x: scroll;
     flex-wrap: wrap;
-
   }
   .note {
     width: inherit;
